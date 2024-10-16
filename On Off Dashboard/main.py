@@ -45,8 +45,11 @@ def main():
      print("\nRunning Avg Lead Time Days with Date Filter Test...")
      TestAvgLeadTimeDaysWithDateFilter().run()
 
-        # print("\nRunning Avg Layover Hours Test...")
-        # TestAvgLayoverHours().run()
+     print("\nRunning Avg Layover Hours Test...")
+     TestAvgLayoverHours().run()
+
+     print("\nRunning Avg Layover Hours Test with date filter...")
+     TestAvgLayoverHoursWithDateFilter().run()
 
      print("\nRunning cost by trip with date filter...")
      TestAvgCostByTripWithDateFilter().run()
