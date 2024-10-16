@@ -27,41 +27,41 @@ def main():
      print("\nRunning Alomosafer ID Count with Date Filter Test...")
      AlomosaferIDDateCountTest().run()
 
-        print("\nRunning Avg one way cost...")
-        TestAvgOneWayCost().run()
+     print("\nRunning Avg one way cost...")
+     TestAvgOneWayCost().run()
 
-        print("\nRunning Avg one way cost with Date Filter Test...")
-        TestAvgOneWayCostWithDateFilter().run()
+     print("\nRunning Avg one way cost with Date Filter Test...")
+     TestAvgOneWayCostWithDateFilter().run()
 
-        print("\nRunning Avg Round Trip Cost...")
-        TestAvgRoundTripCost().run()
+     print("\nRunning Avg Round Trip Cost...")
+     TestAvgRoundTripCost().run()
 
-        print("\nRunning Avg Round Trip Cost with Date Filter Test...")
-        TestAvgRoundTripCostWithDateFilter().run()
+     print("\nRunning Avg Round Trip Cost with Date Filter Test...")
+     TestAvgRoundTripCostWithDateFilter().run()
 
-        print("\nRunning Avg Lead Time Days Test...")
-        TestAvgLeadTimeDays().run()
+     print("\nRunning Avg Lead Time Days Test...")
+     TestAvgLeadTimeDays().run()
 
-        print("\nRunning Avg Lead Time Days with Date Filter Test...")
-        TestAvgLeadTimeDaysWithDateFilter().run()
+     print("\nRunning Avg Lead Time Days with Date Filter Test...")
+     TestAvgLeadTimeDaysWithDateFilter().run()
 
         # print("\nRunning Avg Layover Hours Test...")
         # TestAvgLayoverHours().run()
 
-        print("\nRunning cost by trip with date filter...")
-        TestAvgCostByTripWithDateFilter().run()
+     print("\nRunning cost by trip with date filter...")
+     TestAvgCostByTripWithDateFilter().run()
 
-        print("\nRunning cost by trip...")
-        TestAvgCostByTrip().run()
+     print("\nRunning cost by trip...")
+     TestAvgCostByTrip().run()
 
-        print("\nRunning total spending by month with date filter ...")
-        TestTotalSpendingByMonthWithDateFilter().run()
+     print("\nRunning total spending by month with date filter ...")
+     TestTotalSpendingByMonthWithDateFilter().run()
 
-        print("\nRunning total spending by month ...")
-        TestTotalSpendingByMonth().run()
+     print("\nRunning total spending by month ...")
+     TestTotalSpendingByMonth().run()
 
-        print("\nRunning total spending by trip ...")
-        TestSpendingByTripTypeAndCity().run()
+     print("\nRunning total spending by trip ...")
+     TestSpendingByTripTypeAndCity().run()
 
 
 if __name__ == "__main__":
