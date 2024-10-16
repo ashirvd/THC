@@ -225,17 +225,11 @@ class DataUtils:
     @staticmethod
     def avg_layover_hours(df):
         """Calculates the average layover hours, excluding null values."""
-        # Debug: Show raw data for 'layover_hours' before processing
-        print(f"Raw Layover Hours (Before Processing):\n{df['layover_hours']}\n")
-
         # Replace invalid values with NaN (ensure numeric conversion handles these correctly)
-        df['layover_hours'] = df['layover_hours'].replace(['NULL', 'NaN', 'None', ''], pd.NA)
+        df.loc[:, 'layover_hours'] = df['layover_hours'].replace(['NULL', 'NaN', 'None', ''], pd.NA)
 
         # Convert the column to numeric, coercing invalid values to NaN
-        df['layover_hours'] = pd.to_numeric(df['layover_hours'], errors='coerce')
-
-        # Debug: Show processed values for 'layover_hours' after cleaning
-        print(f"Processed Layover Hours (After Cleaning):\n{df['layover_hours']}\n")
+        df.loc[:, 'layover_hours'] = pd.to_numeric(df['layover_hours'], errors='coerce')
 
         # Drop NaN values and calculate the average
         valid_layover_hours = df['layover_hours'].dropna()
@@ -244,89 +238,97 @@ class DataUtils:
         else:
             avg_layover = 0  # Return 0 if no valid layover hours exist
 
-        return round(avg_layover, 2)
-
-    @staticmethod
-    def total_spending_by_month(df):
-        # Create a copy of the DataFrame to avoid SettingWithCopyWarning
-        df = df.copy()
-
-        # Ensure 'booking_date' is in datetime format
-        df.loc[:, 'booking_date'] = pd.to_datetime(df['booking_date'], errors='coerce')
-
-        # Extract month and year from 'booking_date' for grouping using .loc[] to avoid SettingWithCopyWarning
-        df.loc[:, 'month_year'] = df['booking_date'].dt.to_period('M')
-
-        # Initialize a dictionary to hold total costs by month and trip type
-        spending_summary = {
-            'month_year': [],
-            'oneway_total': [],
-            'roundtrip_total': [],
-            'total': []  # Add a 'total' key for combined spending
-        }
-
-        # Group by 'month_year' and 'trip_type' and sum the 'total' column
-        for month, group in df.groupby('month_year'):
-            oneway_total = group[group['trip_type'].str.strip().str.upper() == 'ONEWAY']['total'].sum()
-            roundtrip_total = group[group['trip_type'].str.strip().str.upper() == 'ROUNDTRIP']['total'].sum()
-
-            # Calculate total spending for the month (oneway + roundtrip)
-            total_spending = oneway_total + roundtrip_total
-
-            spending_summary['month_year'].append(month)
-            spending_summary['oneway_total'].append(oneway_total)
-            spending_summary['roundtrip_total'].append(roundtrip_total)
-            spending_summary['total'].append(total_spending)  # Append the total spending
-
-        # Create a summary DataFrame from the spending summary dictionary
-        summary_df = pd.DataFrame(spending_summary)
-
-        # Round the totals for 'oneway_total' and 'roundtrip_total'
-        summary_df['oneway_total'] = summary_df['oneway_total'].round()
-        summary_df['roundtrip_total'] = summary_df['roundtrip_total'].round()
-
-        # Convert the 'total' column to millions and round to 1 decimal place, then append 'M' for millions
-        summary_df['total'] = (summary_df['total'] / 1_000_000).round(1).astype(str) + 'M'
-
-        # Remove the DataFrame index for a clean output
-        summary_df.reset_index(drop=True, inplace=True)
-
-        return summary_df
+        return round(avg_layover)
 
     @staticmethod
     def spending_by_trip_type_and_city(df):
-
         # Ensure the 'total' column is numeric and round the values
         df.loc[:, 'total'] = pd.to_numeric(df['total'], errors='coerce').round()
 
-        # Initialize dictionaries to store results for W2H and H2W
-        w2h_summary = {}
-        h2w_summary = {}
+        # Normalize city names to uppercase to avoid case mismatch
+        df.loc[:, 'city'] = df['city'].str.strip().str.upper()
 
-        # Filter rows for 'W2H' and 'H2W' trips
-        w2h_trips = df[df['trip_tag'].str.strip().str.upper() == 'W2H']
-        h2w_trips = df[df['trip_tag'].str.strip().str.upper() == 'H2W']
-
-        # Group by city and calculate total spending and count for W2H trips
-        for city, group in w2h_trips.groupby('city'):
-            total_spending = group['total'].sum()
-            record_count = group.shape[0]
-            w2h_summary[city] = (total_spending, record_count)
-
-        # Group by city and calculate total spending and count for H2W trips
-        for city, group in h2w_trips.groupby('city'):
-            total_spending = group['total'].sum()
-            record_count = group.shape[0]
-            h2w_summary[city] = (total_spending, record_count)
-
-        # Print the results for W2H trips
+        # Process W2H trips
         print("W2H Trips:")
-        for city, (total, count) in w2h_summary.items():
-            formatted_total = f"{round(total / 1000, 2)}K" if total >= 1000 else str(total)
-            print(f"{city} ({count} record{'s' if count > 1 else ''}) total is {formatted_total}")
+        for city, city_group in df[df['trip_tag'].str.strip().str.upper() == 'W2H'].groupby('city'):
+            total_average_city = 0  # Initialize the total average for the city
 
-        # Print the results for H2W trips
-        print("\nH2W Trips:")
-        for city, (total, count) in h2w_summary.items():
-            formatted_total = f"{round(total / 1000, 2)}K" if total >= 1000 else str(total)
-            print(f"{city} ({count} record{'s' if count > 1 else ''}) total is {formatted_total}")
+            # Calculate work base-level totals and averages for the city
+            for work_base, group in city_group.groupby('work_base'):
+                total_spending = group['total'].sum()
+                record_count = group.shape[0]
+                average_spending = total_spending / record_count if record_count > 0 else 0
+
+                # Add to the total average of the city
+                total_average_city += average_spending
+
+                # Format and print each work base result
+                formatted_total = f"{round(total_spending / 1000, 2)}K" if total_spending >= 1000 else f"{round(total_spending / 1000, 1)}K"
+                formatted_average = f"{round(average_spending / 1000, 2)}K" if average_spending >= 1000 else f"{round(average_spending / 1000, 1)}K"
+                print(
+                    f"    {city.title()} ({work_base}) ({record_count} record{'s' if record_count > 1 else ''}) total is {formatted_total} average is {formatted_average}")
+
+            # Print the Total Average for the city (sum of all work base averages), rounded to 1 decimal place
+            formatted_total_average_city = f"{round(total_average_city / 1000, 1)}K" if total_average_city >= 1000 else f"{round(total_average_city / 1000, 1)}K"
+            print(f"{city.title()} Total Average is {formatted_total_average_city}")
+            print("--------------------------------")
+
+        print("\n========== H2W Trips ==========")
+
+        # Process H2W trips
+        for city, city_group in df[df['trip_tag'].str.strip().str.upper() == 'H2W'].groupby('city'):
+            total_average_city = 0  # Initialize the total average for the city
+
+            # Calculate work base-level totals and averages for the city
+            for work_base, group in city_group.groupby('work_base'):
+                total_spending = group['total'].sum()
+                record_count = group.shape[0]
+                average_spending = total_spending / record_count if record_count > 0 else 0
+
+                # Add to the total average of the city
+                total_average_city += average_spending
+
+                # Format and print each work base result
+                formatted_total = f"{round(total_spending / 1000, 2)}K" if total_spending >= 1000 else f"{round(total_spending / 1000, 1)}K"
+                formatted_average = f"{round(average_spending / 1000, 2)}K" if average_spending >= 1000 else f"{round(average_spending / 1000, 1)}K"
+                print(
+                    f"    {city.title()} ({work_base}) ({record_count} record{'s' if record_count > 1 else ''}) total is {formatted_total} average is {formatted_average}")
+
+            # Print the Total Average for the city (sum of all work base averages), rounded to 1 decimal place
+            formatted_total_average_city = f"{round(total_average_city / 1000, 1)}K" if total_average_city >= 1000 else f"{round(total_average_city / 1000, 1)}K"
+            print(f"{city.title()} Total Average is {formatted_total_average_city}")
+            print("--------------------------------")
+
+    @staticmethod
+    def avg_lead_time_from_work_base_top_10(df):
+        """
+        Calculates the average lead time in days for each work base,
+        excluding 'Annual team' and considering only values greater than 0 and non-null values.
+        Returns the top 10 work bases by average lead time.
+
+        Args:
+        df (DataFrame): DataFrame containing 'Lead_time_days' and 'work_base' columns.
+
+        Returns:
+        DataFrame: A DataFrame summarizing the top 10 work bases by average lead time.
+        """
+        # Ensure 'Lead_time_days' is numeric and handle non-numeric values
+        df.loc[:, 'Lead_time_days'] = pd.to_numeric(df['Lead_time_days'], errors='coerce')
+
+        # Filter out rows where 'work_base' is 'Annual team'
+        filtered_df = df[df['work_base'] != 'Annual team']
+
+        # Filter 'Lead_time_days' to include only values greater than 0 and non-null
+        valid_lead_times = filtered_df[filtered_df['Lead_time_days'] > 0]
+
+        # Group by 'work_base' and calculate the average lead time
+        avg_lead_time = valid_lead_times.groupby('work_base')['Lead_time_days'].mean().reset_index()
+
+        # Round the average lead time to the nearest integer
+        avg_lead_time['Lead_time_days'] = avg_lead_time['Lead_time_days'].round().astype(int)
+
+        # Sort the results by average lead time in descending order and take the top 10
+        top_10_work_bases = avg_lead_time.sort_values(by='Lead_time_days', ascending=False).head(10)
+
+        return top_10_work_bases
+
