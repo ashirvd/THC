@@ -18,4 +18,4 @@ class Config:
     RECORD_FLAG = 'latest'
     STEPS_COUNT = 1
     DATE_FROM = '2024-01-01'
-    DATE_TO = '2024-06-18'
+    DATE_TO = '2024-06-26'
