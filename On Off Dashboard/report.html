@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title id="head-title">report.html</title>
+      <link href="assets\style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <h1 id="title">report.html</h1>
+    <p>Report generated on 17-Oct-2024 at 20:41:40 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+        v4.1.1</p>
+    <div id="environment-header">
+      <h2>Environment</h2>
+    </div>
+    <table id="environment"></table>
+    <!-- TEMPLATES -->
+      <template id="template_environment_row">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+    <template id="template_results-table__body--empty">
+      <tbody class="results-table-row">
+        <tr id="not-found-message">
+          <td colspan="4">No results found. Check the filters.</th>
+        </tr>
+    </template>
+    <template id="template_results-table__tbody">
+      <tbody class="results-table-row">
+        <tr class="collapsible">
+        </tr>
+        <tr class="extras-row">
+          <td class="extra" colspan="4">
+            <div class="extraHTML"></div>
+            <div class="media">
+              <div class="media-container">
+                  <div class="media-container__nav--left"><</div>
+                  <div class="media-container__viewport">
+                    <img src="" />
+                    <video controls>
+                      <source src="" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="media-container__nav--right">></div>
+                </div>
+                <div class="media__name"></div>
+                <div class="media__counter"></div>
+            </div>
+            <div class="logwrapper">
+              <div class="logexpander"></div>
+              <div class="log"></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </template>
+    <!-- END TEMPLATES -->
+    <div class="summary">
+      <div class="summary__data">
+        <h2>Summary</h2>
+        <div class="additional-summary prefix">
+        </div>
+        <p class="run-count">20 tests took 00:09:11.</p>
+        <p class="filter">(Un)check the boxes to filter the results.</p>
+        <div class="summary__reload">
+          <div class="summary__reload__button hidden" onclick="location.reload()">
+            <div>There are still tests running. <br />Reload this page to get the latest results!</div>
+          </div>
+        </div>
+        <div class="summary__spacer"></div>
+        <div class="controls">
+          <div class="filters">
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" disabled/>
+            <span class="failed">0 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" />
+            <span class="passed">20 Passed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled/>
+            <span class="skipped">0 Skipped,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled/>
+            <span class="xfailed">0 Expected failures,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xpassed" disabled/>
+            <span class="xpassed">0 Unexpected passes,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="error" disabled/>
+            <span class="error">0 Errors,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="rerun" disabled/>
+            <span class="rerun">0 Reruns</span>
+          </div>
+          <div class="collapse">
+            <button id="show_all_details">Show all details</button>&nbsp;/&nbsp;<button id="hide_all_details">Hide all details</button>
+          </div>
+        </div>
+      </div>
+      <div class="additional-summary summary">
+      </div>
+      <div class="additional-summary postfix">
+      </div>
+    </div>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable" data-column-type="result">Result</th>
+          <th class="sortable" data-column-type="testId">Test</th>
+          <th class="sortable" data-column-type="duration">Duration</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+    </table>
+  </body>
+  <footer>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.12.7&#34;, &#34;Platform&#34;: &#34;Windows-10-10.0.19045-SP0&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;8.3.3&#34;, &#34;pluggy&#34;: &#34;1.5.0&#34;}, &#34;Plugins&#34;: {&#34;Faker&#34;: &#34;30.1.0&#34;, &#34;html&#34;: &#34;4.1.1&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;, &#34;ordering&#34;: &#34;0.6&#34;}, &#34;JAVA_HOME&#34;: &#34;C:\\Users\\ashir.afzal_ventured\\AppData\\Local\\Programs\\Eclipse Adoptium\\jdk-11.0.24.8-hotspot\\&#34;}, &#34;tests&#34;: {&#34;test_suite.py::test_alomosafer_id_count&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_alomosafer_id_count&#34;, &#34;duration&#34;: &#34;00:00:28&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_alomosafer_id_count&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:28&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nTotal Distinct Alomosafer IDs: 1351\n&#34;}], &#34;test_suite.py::test_alomosafer_id_count_with_date_filter&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_alomosafer_id_count_with_date_filter&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_alomosafer_id_count_with_date_filter&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nTotal Distinct Alomosafer IDs with Date Filter from 2024-01-01 to 2024-06-30: 1079\n&#34;}], &#34;test_suite.py::test_total_cost&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_total_cost&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_total_cost&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nTotal Cost: 3988391 (4M)\n&#34;}], &#34;test_suite.py::test_total_cost_with_date_filter&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_total_cost_with_date_filter&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_total_cost_with_date_filter&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nFrom 2024-01-01 to 2024-06-30, the total cost is 3035291 (3M)\n&#34;}], &#34;test_suite.py::test_avg_lead_time_days&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_avg_lead_time_days&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_avg_lead_time_days&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nAverage Lead Time in Days: 19\n&#34;}], &#34;test_suite.py::test_avg_lead_time_days_with_date_filter&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_avg_lead_time_days_with_date_filter&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_avg_lead_time_days_with_date_filter&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nAverage Lead Time in Days (with Date Filter from 2024-01-01 to 2024-06-30): 17\n&#34;}], &#34;test_suite.py::test_avg_layover_hours&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_avg_layover_hours&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_avg_layover_hours&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nAverage Layover Hours: 5\n&#34;}], &#34;test_suite.py::test_avg_layover_hours_with_date_filter&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_avg_layover_hours_with_date_filter&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_avg_layover_hours_with_date_filter&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nAverage Layover Hours with Date Filter from 2024-01-01 to 2024-06-30: 5\n&#34;}], &#34;test_suite.py::test_avg_one_way_cost&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_avg_one_way_cost&#34;, &#34;duration&#34;: &#34;00:00:29&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_avg_one_way_cost&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:29&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nAverage One-Way Cost: 1.9K\n&#34;}], &#34;test_suite.py::test_avg_one_way_cost_with_date_filter&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_avg_one_way_cost_with_date_filter&#34;, &#34;duration&#34;: &#34;00:00:28&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_avg_one_way_cost_with_date_filter&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:28&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nAverage One-Way Cost with Date Filter from 2024-01-01 to 2024-06-30: 1.81K\n&#34;}], &#34;test_suite.py::test_avg_round_trip_cost&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_avg_round_trip_cost&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_avg_round_trip_cost&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nAverage Round Trip Cost: 4.15K\n&#34;}], &#34;test_suite.py::test_avg_round_trip_cost_with_date_filter&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_avg_round_trip_cost_with_date_filter&#34;, &#34;duration&#34;: &#34;00:00:29&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_avg_round_trip_cost_with_date_filter&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:29&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nAverage Round Trip Cost with Date Filter from 2024-01-01 to 2024-06-30: 4.22K\n&#34;}], &#34;test_suite.py::test_avg_lead_time_from_work_base_top_10&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_avg_lead_time_from_work_base_top_10&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_avg_lead_time_from_work_base_top_10&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nTop 10 Work Bases by Average Lead Time:\nwork_base  Lead_time_days\n      MCO              42\n      FRA              36\n    Skaka              34\n      PEI              32\n      WDH              31\n   Aljouf              30\n      ARN              26\n      CNF              25\n      IXC              24\n      EDI              24\n&#34;}], &#34;test_suite.py::test_avg_lead_time_from_work_base_top_10_with_date_filter&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_avg_lead_time_from_work_base_top_10_with_date_filter&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_avg_lead_time_from_work_base_top_10_with_date_filter&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nTop 10 Work Bases by Average Lead Time from 2024-01-01 to 2024-06-30:\nwork_base  Lead_time_days\n    Skaka              41\n      EDI              38\n      WDH              31\n   Aljouf              28\n  Red sea              23\n     Hail              23\n      CNF              22\n      PEI              22\n    Jazan              21\n      GRU              21\n&#34;}], &#34;test_suite.py::test_avg_cost_by_trip&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_avg_cost_by_trip&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_avg_cost_by_trip&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nAverage One-Way Cost: 1.90K (31%)\nAverage Round Trip Cost: 4.15K (69%)\n&#34;}], &#34;test_suite.py::test_avg_cost_by_trip_with_date_filter&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_avg_cost_by_trip_with_date_filter&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_avg_cost_by_trip_with_date_filter&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nFrom 2024-01-01 to 2024-06-30,\nAverage One-Way Cost: 1.81K (30%),\nAverage Round Trip Cost: 4.22K (70%)\n&#34;}], &#34;test_suite.py::test_spending_by_trip_type_and_city&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_spending_by_trip_type_and_city&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_spending_by_trip_type_and_city&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nW2H Trips:\n    Abuja (Riyadh) (8 records) total is 34.66K average is 4.33K\nAbuja Total Average is 4.3K\n--------------------------------\n    Amman (Riyadh) (15 records) total is 23.38K average is 1.56K\nAmman Total Average is 1.6K\n--------------------------------\n    Athens (Aljanadria) (5 records) total is 12.01K average is 2.4K\nAthens Total Average is 2.4K\n--------------------------------\n    Atyrau (Riyadh) (21 records) total is 68.59K average is 3.27K\nAtyrau Total Average is 3.3K\n--------------------------------\n    Baku (Riyadh) (4 records) total is 8.56K average is 2.14K\nBaku Total Average is 2.1K\n--------------------------------\n    Bangkok (Neom) (5 records) total is 37.63K average is 7.53K\nBangkok Total Average is 7.5K\n--------------------------------\n    Barcelona (Riyadh) (8 records) total is 31.1K average is 3.89K\nBarcelona Total Average is 3.9K\n--------------------------------\n    Bogota (Riyadh) (4 records) total is 29.92K average is 7.48K\nBogota Total Average is 7.5K\n--------------------------------\n    Bogot\u00e3\u00a1 (Jeddah) (4 records) total is 51.29K average is 12.82K\nBogot\u00e3\u00a1 Total Average is 12.8K\n--------------------------------\n    Cairo (Alula) (4 records) total is 5.18K average is 1.3K\n    Cairo (Hail) (4 records) total is 12.67K average is 3.17K\n    Cairo (Jeddah) (9 records) total is 12.84K average is 1.43K\n    Cairo (Madinah) (2 records) total is 2.98K average is 1.49K\n    Cairo (Redsea) (4 records) total is 4.67K average is 1.17K\n    Cairo (Riyadh) (2 records) total is 2.21K average is 1.1K\nCairo Total Average is 9.6K\n--------------------------------\n    Calgary (Riyadh) (14 records) total is 94.63K average is 6.76K\nCalgary Total Average is 6.8K\n--------------------------------\n    Cape Town (Riyadh) (4 records) total is 21.02K average is 5.26K\nCape Town Total Average is 5.3K\n--------------------------------\n    Confins (Neom) (6 records) total is 41.48K average is 6.91K\nConfins Total Average is 6.9K\n--------------------------------\n    Damnhour (Aljanadria) (5 records) total is 5.95K average is 1.19K\nDamnhour Total Average is 1.2K\n--------------------------------\n    Dublin (Hail) (6 records) total is 20.59K average is 3.43K\nDublin Total Average is 3.4K\n--------------------------------\n    Durban (Riyadh) (2 records) total is 7.43K average is 3.72K\nDurban Total Average is 3.7K\n--------------------------------\n    Dushanbe (Jeddah) (1 record) total is 1.68K average is 1.68K\nDushanbe Total Average is 1.7K\n--------------------------------\n    Giza (Neom) (4 records) total is 2.75K average is 0.7K\nGiza Total Average is 0.7K\n--------------------------------\n    Hyderabad (Madinah) (12 records) total is 32.62K average is 2.72K\nHyderabad Total Average is 2.7K\n--------------------------------\n    Jakarta (Jeddah) (14 records) total is 55.05K average is 3.93K\n    Jakarta (Riyadh) (11 records) total is 22.84K average is 2.08K\n    Jakarta (Tabuk) (5 records) total is 39.86K average is 7.97K\nJakarta Total Average is 14.0K\n--------------------------------\n    Jeddah (Madinah) (1 record) total is 0.2K average is 0.2K\n    Jeddah (Tabuk) (1 record) total is 1.41K average is 1.41K\nJeddah Total Average is 1.6K\n--------------------------------\n    Johannesburg (Jazan) (6 records) total is 21.57K average is 3.6K\nJohannesburg Total Average is 3.6K\n--------------------------------\n    Lagos (Riyadh) (2 records) total is 2.99K average is 1.5K\nLagos Total Average is 1.5K\n--------------------------------\n    Larnaca (Riyadh) (4 records) total is 14.02K average is 3.5K\nLarnaca Total Average is 3.5K\n--------------------------------\n    Manchester (Aljanadria) (8 records) total is 31.8K average is 3.98K\n    Manchester (Jeddah) (4 records) total is 17.33K average is 4.33K\n    Manchester (Riyadh) (12 records) total is 32.8K average is 2.73K\nManchester Total Average is 11.0K\n--------------------------------\n    Manila (Jazan) (12 records) total is 35.05K average is 2.92K\nManila Total Average is 2.9K\n--------------------------------\n    Menia (Aljanadria) (1 record) total is 1.02K average is 1.02K\nMenia Total Average is 1.0K\n--------------------------------\n    Mumbai (Riyadh) (4 records) total is 4.9K average is 1.23K\nMumbai Total Average is 1.2K\n--------------------------------\n    New Delhi (Aljanadria) (4 records) total is 8.91K average is 2.23K\n    New Delhi (Qassim) (8 records) total is 15.19K average is 1.9K\nNew Delhi Total Average is 4.1K\n--------------------------------\n    Port Of Spain (Jeddah) (2 records) total is 15.2K average is 7.6K\n    Port Of Spain (Riyadh) (14 records) total is 126.0K average is 9.0K\nPort Of Spain Total Average is 16.6K\n--------------------------------\n    Rio De Janeiro (Jazan) (3 records) total is 17.94K average is 5.98K\n    Rio De Janeiro (Jeddah) (21 records) total is 202.88K average is 9.66K\n    Rio De Janeiro (Riyadh) (16 records) total is 97.91K average is 6.12K\nRio De Janeiro Total Average is 21.8K\n--------------------------------\n    Riyadh (Jazan) (4 records) total is 3.44K average is 0.9K\n    Riyadh (Jeddah) (2 records) total is 2.37K average is 1.18K\n    Riyadh (Najran) (2 records) total is 2.77K average is 1.38K\n    Riyadh (Neom) (1 record) total is 1.57K average is 1.57K\n    Riyadh (Qassim) (4 records) total is 2.99K average is 0.7K\nRiyadh Total Average is 5.8K\n--------------------------------\n    Roslin (Riyadh) (4 records) total is 12.55K average is 3.14K\nRoslin Total Average is 3.1K\n--------------------------------\n    South Africa (Riyadh) (8 records) total is 15.64K average is 1.96K\nSouth Africa Total Average is 2.0K\n--------------------------------\n    Subang Jaya (Skaka) (6 records) total is 19.01K average is 3.17K\nSubang Jaya Total Average is 3.2K\n--------------------------------\n    Tangerang (Jeddah) (2 records) total is 0.8K average is 0.4K\nTangerang Total Average is 0.4K\n--------------------------------\n    Trinidad (Riyadh) (10 records) total is 47.44K average is 4.74K\nTrinidad Total Average is 4.7K\n--------------------------------\n\n========== H2W Trips ==========\n    Abu Dhabi (Alula) (2 records) total is 8.67K average is 4.34K\nAbu Dhabi Total Average is 4.3K\n--------------------------------\n    Al-Jouf (Riyadh) (2 records) total is 1.41K average is 0.7K\nAl-Jouf Total Average is 0.7K\n--------------------------------\n    Amman (Riyadh) (2 records) total is 3.46K average is 1.73K\nAmman Total Average is 1.7K\n--------------------------------\n    Athens (Aljanadria) (1 record) total is 1.18K average is 1.18K\nAthens Total Average is 1.2K\n--------------------------------\n    Atyrau (Riyadh) (1 record) total is 2.4K average is 2.4K\nAtyrau Total Average is 2.4K\n--------------------------------\n    Baku (Riyadh) (8 records) total is 11.32K average is 1.41K\nBaku Total Average is 1.4K\n--------------------------------\n    Barcelona (Riyadh) (2 records) total is 6.27K average is 3.13K\nBarcelona Total Average is 3.1K\n--------------------------------\n    Cairo (Hail) (2 records) total is 1.88K average is 0.9K\n    Cairo (Jazan) (1 record) total is 0.8K average is 0.8K\n    Cairo (Jeddah) (5 records) total is 3.45K average is 0.7K\nCairo Total Average is 2.5K\n--------------------------------\n    Calgary (Riyadh) (4 records) total is 8.5K average is 2.13K\nCalgary Total Average is 2.1K\n--------------------------------\n    Cape Town (Riyadh) (3 records) total is 7.12K average is 2.37K\nCape Town Total Average is 2.4K\n--------------------------------\n    Damnhour (Aljanadria) (1 record) total is 1.43K average is 1.43K\nDamnhour Total Average is 1.4K\n--------------------------------\n    Dublin (Hail) (3 records) total is 8.67K average is 2.89K\n    Dublin (Riyadh) (2 records) total is 2.45K average is 1.22K\nDublin Total Average is 4.1K\n--------------------------------\n    Edinburgh (Jeddah) (2 records) total is 6.31K average is 3.15K\nEdinburgh Total Average is 3.2K\n--------------------------------\n    Giza (Neom) (2 records) total is 2.28K average is 1.14K\nGiza Total Average is 1.1K\n--------------------------------\n    Jakarta (Jeddah) (1 record) total is 4.2K average is 4.2K\n    Jakarta (Riyadh) (4 records) total is 1.23K average is 0.3K\n    Jakarta (Tabuk) (2 records) total is 5.46K average is 2.73K\nJakarta Total Average is 7.2K\n--------------------------------\n    Jeddah (Madinah) (2 records) total is 1.61K average is 0.8K\n    Jeddah (Tabuk) (3 records) total is 2.35K average is 0.8K\nJeddah Total Average is 1.6K\n--------------------------------\n    Larnaca (Riyadh) (2 records) total is 3.07K average is 1.53K\nLarnaca Total Average is 1.5K\n--------------------------------\n    Lima (Tabuk) (3 records) total is 23.68K average is 7.89K\nLima Total Average is 7.9K\n--------------------------------\n    Madrid (Riyadh) (6 records) total is 31.51K average is 5.25K\nMadrid Total Average is 5.3K\n--------------------------------\n    Manchester (Riyadh) (6 records) total is 8.49K average is 1.41K\nManchester Total Average is 1.4K\n--------------------------------\n    Melbourne (Riyadh) (2 records) total is 0.5K average is 0.3K\nMelbourne Total Average is 0.3K\n--------------------------------\n    Menia (Aljanadria) (1 record) total is 1.43K average is 1.43K\nMenia Total Average is 1.4K\n--------------------------------\n    Mumbai (Riyadh) (2 records) total is 2.16K average is 1.08K\nMumbai Total Average is 1.1K\n--------------------------------\n    New Delhi (Aljanadria) (1 record) total is 1.93K average is 1.93K\n    New Delhi (Qassim) (2 records) total is 4.87K average is 2.43K\nNew Delhi Total Average is 4.4K\n--------------------------------\n    Pontianak (Jazan) (3 records) total is 8.71K average is 2.9K\nPontianak Total Average is 2.9K\n--------------------------------\n    Port Of Spain (Jeddah) (3 records) total is 24.43K average is 8.14K\n    Port Of Spain (Riyadh) (5 records) total is 28.25K average is 5.65K\nPort Of Spain Total Average is 13.8K\n--------------------------------\n    Rio De Janeiro (Jeddah) (2 records) total is 13.52K average is 6.76K\n    Rio De Janeiro (Neom) (3 records) total is 23.92K average is 7.97K\n    Rio De Janeiro (Riyadh) (14 records) total is 84.63K average is 6.05K\nRio De Janeiro Total Average is 20.8K\n--------------------------------\n    Riyadh (Alula) (5 records) total is 7.14K average is 1.43K\n    Riyadh (Jazan) (1 record) total is 0.3K average is 0.3K\n    Riyadh (Najran) (1 record) total is 0.7K average is 0.7K\n    Riyadh (Qassim) (1 record) total is 0.5K average is 0.5K\nRiyadh Total Average is 2.9K\n--------------------------------\n    Tangerang (Arar) (3 records) total is 16.12K average is 5.38K\n    Tangerang (Jeddah) (1 record) total is 0.2K average is 0.2K\nTangerang Total Average is 5.5K\n--------------------------------\n    Tenerife (Najran) (3 records) total is 8.44K average is 2.81K\nTenerife Total Average is 2.8K\n--------------------------------\n    Trinidad (Riyadh) (6 records) total is 45.59K average is 7.6K\nTrinidad Total Average is 7.6K\n--------------------------------\n&#34;}], &#34;test_suite.py::test_spending_by_trip_type_and_city_with_date_filter&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_spending_by_trip_type_and_city_with_date_filter&#34;, &#34;duration&#34;: &#34;00:00:27&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_spending_by_trip_type_and_city_with_date_filter&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:27&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nDisplaying results from 2024-01-01 to 2024-06-30...\nW2H Trips:\n    Abuja (Riyadh) (4 records) total is 19.76K average is 4.94K\nAbuja Total Average is 4.9K\n--------------------------------\n    Amman (Riyadh) (13 records) total is 21.16K average is 1.63K\nAmman Total Average is 1.6K\n--------------------------------\n    Athens (Aljanadria) (2 records) total is 3.09K average is 1.54K\nAthens Total Average is 1.5K\n--------------------------------\n    Atyrau (Riyadh) (15 records) total is 46.83K average is 3.12K\nAtyrau Total Average is 3.1K\n--------------------------------\n    Baku (Riyadh) (4 records) total is 8.56K average is 2.14K\nBaku Total Average is 2.1K\n--------------------------------\n    Bangkok (Neom) (5 records) total is 37.63K average is 7.53K\nBangkok Total Average is 7.5K\n--------------------------------\n    Barcelona (Riyadh) (4 records) total is 14.07K average is 3.52K\nBarcelona Total Average is 3.5K\n--------------------------------\n    Bogota (Riyadh) (4 records) total is 29.92K average is 7.48K\nBogota Total Average is 7.5K\n--------------------------------\n    Bogot\u00e3\u00a1 (Jeddah) (4 records) total is 51.29K average is 12.82K\nBogot\u00e3\u00a1 Total Average is 12.8K\n--------------------------------\n    Cairo (Hail) (4 records) total is 12.67K average is 3.17K\n    Cairo (Jeddah) (5 records) total is 8.39K average is 1.68K\n    Cairo (Madinah) (2 records) total is 2.98K average is 1.49K\nCairo Total Average is 6.3K\n--------------------------------\n    Calgary (Riyadh) (10 records) total is 71.79K average is 7.18K\nCalgary Total Average is 7.2K\n--------------------------------\n    Cape Town (Riyadh) (4 records) total is 21.02K average is 5.26K\nCape Town Total Average is 5.3K\n--------------------------------\n    Damnhour (Aljanadria) (3 records) total is 3.96K average is 1.32K\nDamnhour Total Average is 1.3K\n--------------------------------\n    Dublin (Hail) (6 records) total is 20.59K average is 3.43K\nDublin Total Average is 3.4K\n--------------------------------\n    Dushanbe (Jeddah) (1 record) total is 1.68K average is 1.68K\nDushanbe Total Average is 1.7K\n--------------------------------\n    Giza (Neom) (4 records) total is 2.75K average is 0.7K\nGiza Total Average is 0.7K\n--------------------------------\n    Hyderabad (Madinah) (8 records) total is 20.37K average is 2.55K\nHyderabad Total Average is 2.5K\n--------------------------------\n    Jakarta (Jeddah) (6 records) total is 17.77K average is 2.96K\n    Jakarta (Riyadh) (11 records) total is 22.84K average is 2.08K\nJakarta Total Average is 5.0K\n--------------------------------\n    Jeddah (Madinah) (1 record) total is 0.2K average is 0.2K\n    Jeddah (Tabuk) (1 record) total is 1.41K average is 1.41K\nJeddah Total Average is 1.6K\n--------------------------------\n    Johannesburg (Jazan) (6 records) total is 21.57K average is 3.6K\nJohannesburg Total Average is 3.6K\n--------------------------------\n    Lagos (Riyadh) (2 records) total is 2.99K average is 1.5K\nLagos Total Average is 1.5K\n--------------------------------\n    Larnaca (Riyadh) (2 records) total is 8.25K average is 4.13K\nLarnaca Total Average is 4.1K\n--------------------------------\n    Manchester (Aljanadria) (4 records) total is 16.45K average is 4.11K\n    Manchester (Riyadh) (4 records) total is 15.86K average is 3.97K\nManchester Total Average is 8.1K\n--------------------------------\n    Manila (Jazan) (8 records) total is 22.86K average is 2.86K\nManila Total Average is 2.9K\n--------------------------------\n    Menia (Aljanadria) (1 record) total is 1.02K average is 1.02K\nMenia Total Average is 1.0K\n--------------------------------\n    Mumbai (Riyadh) (4 records) total is 4.9K average is 1.23K\nMumbai Total Average is 1.2K\n--------------------------------\n    New Delhi (Aljanadria) (4 records) total is 8.91K average is 2.23K\n    New Delhi (Qassim) (8 records) total is 15.19K average is 1.9K\nNew Delhi Total Average is 4.1K\n--------------------------------\n    Port Of Spain (Jeddah) (2 records) total is 15.2K average is 7.6K\n    Port Of Spain (Riyadh) (14 records) total is 126.0K average is 9.0K\nPort Of Spain Total Average is 16.6K\n--------------------------------\n    Rio De Janeiro (Jazan) (3 records) total is 17.94K average is 5.98K\n    Rio De Janeiro (Jeddah) (17 records) total is 154.55K average is 9.09K\n    Rio De Janeiro (Riyadh) (8 records) total is 33.23K average is 4.15K\nRio De Janeiro Total Average is 19.2K\n--------------------------------\n    Riyadh (Jazan) (2 records) total is 1.03K average is 0.5K\n    Riyadh (Jeddah) (2 records) total is 2.37K average is 1.18K\n    Riyadh (Neom) (1 record) total is 1.57K average is 1.57K\n    Riyadh (Qassim) (2 records) total is 1.11K average is 0.6K\nRiyadh Total Average is 3.8K\n--------------------------------\n    Roslin (Riyadh) (4 records) total is 12.55K average is 3.14K\nRoslin Total Average is 3.1K\n--------------------------------\n    South Africa (Riyadh) (8 records) total is 15.64K average is 1.96K\nSouth Africa Total Average is 2.0K\n--------------------------------\n    Subang Jaya (Skaka) (6 records) total is 19.01K average is 3.17K\nSubang Jaya Total Average is 3.2K\n--------------------------------\n    Trinidad (Riyadh) (4 records) total is 24.86K average is 6.22K\nTrinidad Total Average is 6.2K\n--------------------------------\n\n========== H2W Trips ==========\n    Abu Dhabi (Alula) (2 records) total is 8.67K average is 4.34K\nAbu Dhabi Total Average is 4.3K\n--------------------------------\n    Al-Jouf (Riyadh) (2 records) total is 1.41K average is 0.7K\nAl-Jouf Total Average is 0.7K\n--------------------------------\n    Amman (Riyadh) (1 record) total is 0.6K average is 0.6K\nAmman Total Average is 0.6K\n--------------------------------\n    Athens (Aljanadria) (1 record) total is 1.18K average is 1.18K\nAthens Total Average is 1.2K\n--------------------------------\n    Atyrau (Riyadh) (1 record) total is 2.4K average is 2.4K\nAtyrau Total Average is 2.4K\n--------------------------------\n    Baku (Riyadh) (8 records) total is 11.32K average is 1.41K\nBaku Total Average is 1.4K\n--------------------------------\n    Barcelona (Riyadh) (2 records) total is 6.27K average is 3.13K\nBarcelona Total Average is 3.1K\n--------------------------------\n    Cairo (Hail) (2 records) total is 1.88K average is 0.9K\n    Cairo (Jeddah) (4 records) total is 3.16K average is 0.8K\nCairo Total Average is 1.7K\n--------------------------------\n    Calgary (Riyadh) (4 records) total is 8.5K average is 2.13K\nCalgary Total Average is 2.1K\n--------------------------------\n    Cape Town (Riyadh) (3 records) total is 7.12K average is 2.37K\nCape Town Total Average is 2.4K\n--------------------------------\n    Damnhour (Aljanadria) (1 record) total is 1.43K average is 1.43K\nDamnhour Total Average is 1.4K\n--------------------------------\n    Dublin (Hail) (3 records) total is 8.67K average is 2.89K\n    Dublin (Riyadh) (2 records) total is 2.45K average is 1.22K\nDublin Total Average is 4.1K\n--------------------------------\n    Jakarta (Jeddah) (1 record) total is 4.2K average is 4.2K\n    Jakarta (Riyadh) (4 records) total is 1.23K average is 0.3K\n    Jakarta (Tabuk) (2 records) total is 5.46K average is 2.73K\nJakarta Total Average is 7.2K\n--------------------------------\n    Jeddah (Madinah) (2 records) total is 1.61K average is 0.8K\n    Jeddah (Tabuk) (1 record) total is 0.6K average is 0.6K\nJeddah Total Average is 1.4K\n--------------------------------\n    Larnaca (Riyadh) (2 records) total is 3.07K average is 1.53K\nLarnaca Total Average is 1.5K\n--------------------------------\n    Lima (Tabuk) (3 records) total is 23.68K average is 7.89K\nLima Total Average is 7.9K\n--------------------------------\n    Madrid (Riyadh) (6 records) total is 31.51K average is 5.25K\nMadrid Total Average is 5.3K\n--------------------------------\n    Manchester (Riyadh) (6 records) total is 8.49K average is 1.41K\nManchester Total Average is 1.4K\n--------------------------------\n    Melbourne (Riyadh) (2 records) total is 0.5K average is 0.3K\nMelbourne Total Average is 0.3K\n--------------------------------\n    Menia (Aljanadria) (1 record) total is 1.43K average is 1.43K\nMenia Total Average is 1.4K\n--------------------------------\n    Mumbai (Riyadh) (1 record) total is 1.0K average is 1.0K\nMumbai Total Average is 1.0K\n--------------------------------\n    New Delhi (Aljanadria) (1 record) total is 1.93K average is 1.93K\n    New Delhi (Qassim) (2 records) total is 4.87K average is 2.43K\nNew Delhi Total Average is 4.4K\n--------------------------------\n    Pontianak (Jazan) (3 records) total is 8.71K average is 2.9K\nPontianak Total Average is 2.9K\n--------------------------------\n    Port Of Spain (Jeddah) (3 records) total is 24.43K average is 8.14K\n    Port Of Spain (Riyadh) (5 records) total is 28.25K average is 5.65K\nPort Of Spain Total Average is 13.8K\n--------------------------------\n    Rio De Janeiro (Jeddah) (2 records) total is 13.52K average is 6.76K\n    Rio De Janeiro (Riyadh) (11 records) total is 68.85K average is 6.26K\nRio De Janeiro Total Average is 13.0K\n--------------------------------\n    Riyadh (Alula) (5 records) total is 7.14K average is 1.43K\n    Riyadh (Jazan) (1 record) total is 0.3K average is 0.3K\n    Riyadh (Najran) (1 record) total is 0.7K average is 0.7K\n    Riyadh (Qassim) (1 record) total is 0.5K average is 0.5K\nRiyadh Total Average is 2.9K\n--------------------------------\n    Tangerang (Arar) (3 records) total is 16.12K average is 5.38K\n    Tangerang (Jeddah) (1 record) total is 0.2K average is 0.2K\nTangerang Total Average is 5.5K\n--------------------------------\n    Tenerife (Najran) (3 records) total is 8.44K average is 2.81K\nTenerife Total Average is 2.8K\n--------------------------------\n    Trinidad (Riyadh) (6 records) total is 45.59K average is 7.6K\nTrinidad Total Average is 7.6K\n--------------------------------\n&#34;}], &#34;test_suite.py::test_spending_by_month&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_spending_by_month&#34;, &#34;duration&#34;: &#34;00:00:28&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_spending_by_month&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:28&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nTotal Spending by Month:\n  month_year  oneway_total  roundtrip_total total\n0    2024-01      170334.0          72504.0  0.2M\n1    2024-02      246241.0         320362.0  0.6M\n2    2024-03      374551.0         326714.0  0.7M\n3    2024-04       95936.0         376261.0  0.5M\n4    2024-05      124425.0         226315.0  0.4M\n5    2024-06      171850.0         529795.0  0.7M\n6    2024-07       88284.0         383627.0  0.5M\n7    2024-08      141847.0         339333.0  0.5M\n&#34;}], &#34;test_suite.py::test_spending_by_month_with_date_filter&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;test_suite.py::test_spending_by_month_with_date_filter&#34;, &#34;duration&#34;: &#34;00:00:28&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_suite.py::test_spending_by_month_with_date_filter&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:28&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\nTotal Spending by Month from 2024-01-01 to 2024-06-30:\n  month_year  oneway_total  roundtrip_total total\n0    2024-01      170334.0          72504.0  0.2M\n1    2024-02      246241.0         320362.0  0.6M\n2    2024-03      374551.0         326714.0  0.7M\n3    2024-04       95936.0         376261.0  0.5M\n4    2024-05      124425.0         226315.0  0.4M\n5    2024-06      171850.0         529795.0  0.7M\n&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;report.html&#34;}"></div>
+    <script>
+      (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')
+
+class DataManager {
+    setManager(data) {
+        const collapsedCategories = [...getCollapsedCategory(data.renderCollapsed)]
+        const collapsedIds = []
+        const tests = Object.values(data.tests).flat().map((test, index) => {
+            const collapsed = collapsedCategories.includes(test.result.toLowerCase())
+            const id = `test_${index}`
+            if (collapsed) {
+                collapsedIds.push(id)
+            }
+            return {
+                ...test,
+                id,
+                collapsed,
+            }
+        })
+        const dataBlob = { ...data, tests }
+        this.data = { ...dataBlob }
+        this.renderData = { ...dataBlob }
+        setCollapsedIds(collapsedIds)
+    }
+
+    get allData() {
+        return { ...this.data }
+    }
+
+    resetRender() {
+        this.renderData = { ...this.data }
+    }
+
+    setRender(data) {
+        this.renderData.tests = [...data]
+    }
+
+    toggleCollapsedItem(id) {
+        this.renderData.tests = this.renderData.tests.map((test) =>
+            test.id === id ? { ...test, collapsed: !test.collapsed } : test,
+        )
+    }
+
+    set allCollapsed(collapsed) {
+        this.renderData = { ...this.renderData, tests: [...this.renderData.tests.map((test) => (
+            { ...test, collapsed }
+        ))] }
+    }
+
+    get testSubset() {
+        return [...this.renderData.tests]
+    }
+
+    get environment() {
+        return this.renderData.environment
+    }
+
+    get initialSort() {
+        return this.data.initialSort
+    }
+}
+
+module.exports = {
+    manager: new DataManager(),
+}
+
+},{"./storage.js":8}],2:[function(require,module,exports){
+const mediaViewer = require('./mediaviewer.js')
+const templateEnvRow = document.getElementById('template_environment_row')
+const templateResult = document.getElementById('template_results-table__tbody')
+
+function htmlToElements(html) {
+    const temp = document.createElement('template')
+    temp.innerHTML = html
+    return temp.content.childNodes
+}
+
+const find = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return elem.querySelector(selector)
+}
+
+const findAll = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return [...elem.querySelectorAll(selector)]
+}
+
+const dom = {
+    getStaticRow: (key, value) => {
+        const envRow = templateEnvRow.content.cloneNode(true)
+        const isObj = typeof value === 'object' && value !== null
+        const values = isObj ? Object.keys(value).map((k) => `${k}: ${value[k]}`) : null
+
+        const valuesElement = htmlToElements(
+            values ? `<ul>${values.map((val) => `<li>${val}</li>`).join('')}<ul>` : `<div>${value}</div>`)[0]
+        const td = findAll('td', envRow)
+        td[0].textContent = key
+        td[1].appendChild(valuesElement)
+
+        return envRow
+    },
+    getResultTBody: ({ testId, id, log, extras, resultsTableRow, tableHtml, result, collapsed }) => {
+        const resultBody = templateResult.content.cloneNode(true)
+        resultBody.querySelector('tbody').classList.add(result.toLowerCase())
+        resultBody.querySelector('tbody').id = testId
+        resultBody.querySelector('.collapsible').dataset.id = id
+
+        resultsTableRow.forEach((html) => {
+            const t = document.createElement('template')
+            t.innerHTML = html
+            resultBody.querySelector('.collapsible').appendChild(t.content)
+        })
+
+        if (log) {
+            // Wrap lines starting with "E" with span.error to color those lines red
+            const wrappedLog = log.replace(/^E.*$/gm, (match) => `<span class="error">${match}</span>`)
+            resultBody.querySelector('.log').innerHTML = wrappedLog
+        } else {
+            resultBody.querySelector('.log').remove()
+        }
+
+        if (collapsed) {
+            resultBody.querySelector('.collapsible > td')?.classList.add('collapsed')
+            resultBody.querySelector('.extras-row').classList.add('hidden')
+        } else {
+            resultBody.querySelector('.collapsible > td')?.classList.remove('collapsed')
+        }
+
+        const media = []
+        extras?.forEach(({ name, format_type, content }) => {
+            if (['image', 'video'].includes(format_type)) {
+                media.push({ path: content, name, format_type })
+            }
+
+            if (format_type === 'html') {
+                resultBody.querySelector('.extraHTML').insertAdjacentHTML('beforeend', `<div>${content}</div>`)
+            }
+        })
+        mediaViewer.setup(resultBody, media)
+
+        // Add custom html from the pytest_html_results_table_html hook
+        tableHtml?.forEach((item) => {
+            resultBody.querySelector('td[class="extra"]').insertAdjacentHTML('beforeend', item)
+        })
+
+        return resultBody
+    },
+}
+
+module.exports = {
+    dom,
+    htmlToElements,
+    find,
+    findAll,
+}
+
+},{"./mediaviewer.js":6}],3:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const storageModule = require('./storage.js')
+
+const getFilteredSubSet = (filter) =>
+    manager.allData.tests.filter(({ result }) => filter.includes(result.toLowerCase()))
+
+const doInitFilter = () => {
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+}
+
+const doFilter = (type, show) => {
+    if (show) {
+        storageModule.showCategory(type)
+    } else {
+        storageModule.hideCategory(type)
+    }
+
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+
+    const sortColumn = storageModule.getSort()
+    doSort(sortColumn, true)
+}
+
+module.exports = {
+    doFilter,
+    doInitFilter,
+}
+
+},{"./datamanager.js":1,"./sort.js":7,"./storage.js":8}],4:[function(require,module,exports){
+const { redraw, bindEvents, renderStatic } = require('./main.js')
+const { doInitFilter } = require('./filter.js')
+const { doInitSort } = require('./sort.js')
+const { manager } = require('./datamanager.js')
+const data = JSON.parse(document.getElementById('data-container').dataset.jsonblob)
+
+function init() {
+    manager.setManager(data)
+    doInitFilter()
+    doInitSort()
+    renderStatic()
+    redraw()
+    bindEvents()
+}
+
+init()
+
+},{"./datamanager.js":1,"./filter.js":3,"./main.js":5,"./sort.js":7}],5:[function(require,module,exports){
+const { dom, find, findAll } = require('./dom.js')
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const { doFilter } = require('./filter.js')
+const {
+    getVisible,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    getSortDirection,
+    possibleFilters,
+} = require('./storage.js')
+
+const removeChildren = (node) => {
+    while (node.firstChild) {
+        node.removeChild(node.firstChild)
+    }
+}
+
+const renderStatic = () => {
+    const renderEnvironmentTable = () => {
+        const environment = manager.environment
+        const rows = Object.keys(environment).map((key) => dom.getStaticRow(key, environment[key]))
+        const table = document.getElementById('environment')
+        removeChildren(table)
+        rows.forEach((row) => table.appendChild(row))
+    }
+    renderEnvironmentTable()
+}
+
+const addItemToggleListener = (elem) => {
+    elem.addEventListener('click', ({ target }) => {
+        const id = target.parentElement.dataset.id
+        manager.toggleCollapsedItem(id)
+
+        const collapsedIds = getCollapsedIds()
+        if (collapsedIds.includes(id)) {
+            const updated = collapsedIds.filter((item) => item !== id)
+            setCollapsedIds(updated)
+        } else {
+            collapsedIds.push(id)
+            setCollapsedIds(collapsedIds)
+        }
+        redraw()
+    })
+}
+
+const renderContent = (tests) => {
+    const sortAttr = getSort(manager.initialSort)
+    const sortAsc = JSON.parse(getSortDirection())
+    const rows = tests.map(dom.getResultTBody)
+    const table = document.getElementById('results-table')
+    const tableHeader = document.getElementById('results-table-head')
+
+    const newTable = document.createElement('table')
+    newTable.id = 'results-table'
+
+    // remove all sorting classes and set the relevant
+    findAll('.sortable', tableHeader).forEach((elem) => elem.classList.remove('asc', 'desc'))
+    tableHeader.querySelector(`.sortable[data-column-type="${sortAttr}"]`)?.classList.add(sortAsc ? 'desc' : 'asc')
+    newTable.appendChild(tableHeader)
+
+    if (!rows.length) {
+        const emptyTable = document.getElementById('template_results-table__body--empty').content.cloneNode(true)
+        newTable.appendChild(emptyTable)
+    } else {
+        rows.forEach((row) => {
+            if (!!row) {
+                findAll('.collapsible td:not(.col-links', row).forEach(addItemToggleListener)
+                find('.logexpander', row).addEventListener('click',
+                    (evt) => evt.target.parentNode.classList.toggle('expanded'),
+                )
+                newTable.appendChild(row)
+            }
+        })
+    }
+
+    table.replaceWith(newTable)
+}
+
+const renderDerived = () => {
+    const currentFilter = getVisible()
+    possibleFilters.forEach((result) => {
+        const input = document.querySelector(`input[data-test-result="${result}"]`)
+        input.checked = currentFilter.includes(result)
+    })
+}
+
+const bindEvents = () => {
+    const filterColumn = (evt) => {
+        const { target: element } = evt
+        const { testResult } = element.dataset
+
+        doFilter(testResult, element.checked)
+        const collapsedIds = getCollapsedIds()
+        const updated = manager.renderData.tests.map((test) => {
+            return {
+                ...test,
+                collapsed: collapsedIds.includes(test.id),
+            }
+        })
+        manager.setRender(updated)
+        redraw()
+    }
+
+    const header = document.getElementById('environment-header')
+    header.addEventListener('click', () => {
+        const table = document.getElementById('environment')
+        table.classList.toggle('hidden')
+        header.classList.toggle('collapsed')
+    })
+
+    findAll('input[name="filter_checkbox"]').forEach((elem) => {
+        elem.addEventListener('click', filterColumn)
+    })
+
+    findAll('.sortable').forEach((elem) => {
+        elem.addEventListener('click', (evt) => {
+            const { target: element } = evt
+            const { columnType } = element.dataset
+            doSort(columnType)
+            redraw()
+        })
+    })
+
+    document.getElementById('show_all_details').addEventListener('click', () => {
+        manager.allCollapsed = false
+        setCollapsedIds([])
+        redraw()
+    })
+    document.getElementById('hide_all_details').addEventListener('click', () => {
+        manager.allCollapsed = true
+        const allIds = manager.renderData.tests.map((test) => test.id)
+        setCollapsedIds(allIds)
+        redraw()
+    })
+}
+
+const redraw = () => {
+    const { testSubset } = manager
+
+    renderContent(testSubset)
+    renderDerived()
+}
+
+module.exports = {
+    redraw,
+    bindEvents,
+    renderStatic,
+}
+
+},{"./datamanager.js":1,"./dom.js":2,"./filter.js":3,"./sort.js":7,"./storage.js":8}],6:[function(require,module,exports){
+class MediaViewer {
+    constructor(assets) {
+        this.assets = assets
+        this.index = 0
+    }
+
+    nextActive() {
+        this.index = this.index === this.assets.length - 1 ? 0 : this.index + 1
+        return [this.activeFile, this.index]
+    }
+
+    prevActive() {
+        this.index = this.index === 0 ? this.assets.length - 1 : this.index -1
+        return [this.activeFile, this.index]
+    }
+
+    get currentIndex() {
+        return this.index
+    }
+
+    get activeFile() {
+        return this.assets[this.index]
+    }
+}
+
+
+const setup = (resultBody, assets) => {
+    if (!assets.length) {
+        resultBody.querySelector('.media').classList.add('hidden')
+        return
+    }
+
+    const mediaViewer = new MediaViewer(assets)
+    const container = resultBody.querySelector('.media-container')
+    const leftArrow = resultBody.querySelector('.media-container__nav--left')
+    const rightArrow = resultBody.querySelector('.media-container__nav--right')
+    const mediaName = resultBody.querySelector('.media__name')
+    const counter = resultBody.querySelector('.media__counter')
+    const imageEl = resultBody.querySelector('img')
+    const sourceEl = resultBody.querySelector('source')
+    const videoEl = resultBody.querySelector('video')
+
+    const setImg = (media, index) => {
+        if (media?.format_type === 'image') {
+            imageEl.src = media.path
+
+            imageEl.classList.remove('hidden')
+            videoEl.classList.add('hidden')
+        } else if (media?.format_type === 'video') {
+            sourceEl.src = media.path
+
+            videoEl.classList.remove('hidden')
+            imageEl.classList.add('hidden')
+        }
+
+        mediaName.innerText = media?.name
+        counter.innerText = `${index + 1} / ${assets.length}`
+    }
+    setImg(mediaViewer.activeFile, mediaViewer.currentIndex)
+
+    const moveLeft = () => {
+        const [media, index] = mediaViewer.prevActive()
+        setImg(media, index)
+    }
+    const doRight = () => {
+        const [media, index] = mediaViewer.nextActive()
+        setImg(media, index)
+    }
+    const openImg = () => {
+        window.open(mediaViewer.activeFile.path, '_blank')
+    }
+    if (assets.length === 1) {
+        container.classList.add('media-container--fullscreen')
+    } else {
+        leftArrow.addEventListener('click', moveLeft)
+        rightArrow.addEventListener('click', doRight)
+    }
+    imageEl.addEventListener('click', openImg)
+}
+
+module.exports = {
+    setup,
+}
+
+},{}],7:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const storageModule = require('./storage.js')
+
+const genericSort = (list, key, ascending, customOrder) => {
+    let sorted
+    if (customOrder) {
+        sorted = list.sort((a, b) => {
+            const aValue = a.result.toLowerCase()
+            const bValue = b.result.toLowerCase()
+
+            const aIndex = customOrder.findIndex((item) => item.toLowerCase() === aValue)
+            const bIndex = customOrder.findIndex((item) => item.toLowerCase() === bValue)
+
+            // Compare the indices to determine the sort order
+            return aIndex - bIndex
+        })
+    } else {
+        sorted = list.sort((a, b) => a[key] === b[key] ? 0 : a[key] > b[key] ? 1 : -1)
+    }
+
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const durationSort = (list, ascending) => {
+    const parseDuration = (duration) => {
+        if (duration.includes(':')) {
+            // If it's in the format "HH:mm:ss"
+            const [hours, minutes, seconds] = duration.split(':').map(Number)
+            return (hours * 3600 + minutes * 60 + seconds) * 1000
+        } else {
+            // If it's in the format "nnn ms"
+            return parseInt(duration)
+        }
+    }
+    const sorted = list.sort((a, b) => parseDuration(a['duration']) - parseDuration(b['duration']))
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const doInitSort = () => {
+    const type = storageModule.getSort(manager.initialSort)
+    const ascending = storageModule.getSortDirection()
+    const list = manager.testSubset
+    const initialOrder = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed', 'Skipped', 'Passed']
+
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    if (type?.toLowerCase() === 'original') {
+        manager.setRender(list)
+    } else {
+        let sortedList
+        switch (type) {
+        case 'duration':
+            sortedList = durationSort(list, ascending)
+            break
+        case 'result':
+            sortedList = genericSort(list, type, ascending, initialOrder)
+            break
+        default:
+            sortedList = genericSort(list, type, ascending)
+            break
+        }
+        manager.setRender(sortedList)
+    }
+}
+
+const doSort = (type, skipDirection) => {
+    const newSortType = storageModule.getSort(manager.initialSort) !== type
+    const currentAsc = storageModule.getSortDirection()
+    let ascending
+    if (skipDirection) {
+        ascending = currentAsc
+    } else {
+        ascending = newSortType ? false : !currentAsc
+    }
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    const list = manager.testSubset
+    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)
+    manager.setRender(sortedList)
+}
+
+module.exports = {
+    doInitSort,
+    doSort,
+}
+
+},{"./datamanager.js":1,"./storage.js":8}],8:[function(require,module,exports){
+const possibleFilters = [
+    'passed',
+    'skipped',
+    'failed',
+    'error',
+    'xfailed',
+    'xpassed',
+    'rerun',
+]
+
+const getVisible = () => {
+    const url = new URL(window.location.href)
+    const settings = new URLSearchParams(url.search).get('visible')
+    const lower = (item) => {
+        const lowerItem = item.toLowerCase()
+        if (possibleFilters.includes(lowerItem)) {
+            return lowerItem
+        }
+        return null
+    }
+    return settings === null ?
+        possibleFilters :
+        [...new Set(settings?.split(',').map(lower).filter((item) => item))]
+}
+
+const hideCategory = (categoryToHide) => {
+    const url = new URL(window.location.href)
+    const visibleParams = new URLSearchParams(url.search).get('visible')
+    const currentVisible = visibleParams ? visibleParams.split(',') : [...possibleFilters]
+    const settings = [...new Set(currentVisible)].filter((f) => f !== categoryToHide).join(',')
+
+    url.searchParams.set('visible', settings)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const showCategory = (categoryToShow) => {
+    if (typeof window === 'undefined') {
+        return
+    }
+    const url = new URL(window.location.href)
+    const currentVisible = new URLSearchParams(url.search).get('visible')?.split(',').filter(Boolean) ||
+        [...possibleFilters]
+    const settings = [...new Set([categoryToShow, ...currentVisible])]
+    const noFilter = possibleFilters.length === settings.length || !settings.length
+
+    noFilter ? url.searchParams.delete('visible') : url.searchParams.set('visible', settings.join(','))
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getSort = (initialSort) => {
+    const url = new URL(window.location.href)
+    let sort = new URLSearchParams(url.search).get('sort')
+    if (!sort) {
+        sort = initialSort || 'result'
+    }
+    return sort
+}
+
+const setSort = (type) => {
+    const url = new URL(window.location.href)
+    url.searchParams.set('sort', type)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getCollapsedCategory = (renderCollapsed) => {
+    let categories
+    if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href)
+        const collapsedItems = new URLSearchParams(url.search).get('collapsed')
+        switch (true) {
+        case !renderCollapsed && collapsedItems === null:
+            categories = ['passed']
+            break
+        case collapsedItems?.length === 0 || /^["']{2}$/.test(collapsedItems):
+            categories = []
+            break
+        case /^all$/.test(collapsedItems) || collapsedItems === null && /^all$/.test(renderCollapsed):
+            categories = [...possibleFilters]
+            break
+        default:
+            categories = collapsedItems?.split(',').map((item) => item.toLowerCase()) || renderCollapsed
+            break
+        }
+    } else {
+        categories = []
+    }
+    return categories
+}
+
+const getSortDirection = () => JSON.parse(sessionStorage.getItem('sortAsc')) || false
+const setSortDirection = (ascending) => sessionStorage.setItem('sortAsc', ascending)
+
+const getCollapsedIds = () => JSON.parse(sessionStorage.getItem('collapsedIds')) || []
+const setCollapsedIds = (list) => sessionStorage.setItem('collapsedIds', JSON.stringify(list))
+
+module.exports = {
+    getVisible,
+    hideCategory,
+    showCategory,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    setSort,
+    getSortDirection,
+    setSortDirection,
+    getCollapsedCategory,
+    possibleFilters,
+}
+
+},{}]},{},[4]);
+    </script>
+  </footer>
+</html>
